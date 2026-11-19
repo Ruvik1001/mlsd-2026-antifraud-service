@@ -1,0 +1,9 @@
+{
+  "seed": 2026,
+  "n": 20000,
+  "intercept": -6.9743589743589745,
+  "fraud_rate": 0.00585,
+  "sha256": "9a2ddb6bb6b931b8b5fb442a7c214dd9c6f4b0b8d0fd9492663e30749911f458",
+  "path": "orders_quick.csv",
+  "quick": true
+}

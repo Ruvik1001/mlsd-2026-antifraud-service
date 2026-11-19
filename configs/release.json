@@ -1,0 +1,9 @@
+{
+  "shadow_share": 1.0,
+  "canary_share": 0.1,
+  "error_rate_limit": 0.01,
+  "min_requests_per_window": 1000,
+  "consecutive_bad_windows": 2,
+  "latency_p95_limit_ms": 100,
+  "psi_alert": 0.2
+}

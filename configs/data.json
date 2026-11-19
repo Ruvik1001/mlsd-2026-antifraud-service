@@ -1,0 +1,12 @@
+{
+  "seed": 2026,
+  "n_orders": 200000,
+  "days": 30,
+  "label_delay_days": 7,
+  "target_fraud_rate_train": 0.005,
+  "fn_cost": 8000,
+  "fp_cost": 150,
+  "review_budget": 3000,
+  "payment_methods": ["card", "wallet", "cod"],
+  "payment_probs": [0.55, 0.30, 0.15]
+}

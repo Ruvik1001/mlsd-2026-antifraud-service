@@ -1,0 +1,14 @@
+{
+  "n_events": 3000,
+  "n_rollbacks": 1,
+  "rollbacks": [
+    {
+      "t": 2138190,
+      "action": "rollback",
+      "reason": "latency_p95",
+      "window_id": 5,
+      "canary_p95_ms": 150.0
+    }
+  ],
+  "final_phase": "rolled_back"
+}

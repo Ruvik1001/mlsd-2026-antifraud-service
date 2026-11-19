@@ -1,0 +1,56 @@
+{
+  "accept": true,
+  "reason": "candidate_better_or_equal",
+  "current": {
+    "auc": 0.9455090232814436,
+    "cost": 223150,
+    "fn": 26,
+    "fp": 101,
+    "tp": 44,
+    "reviews": 145,
+    "threshold": 0.9895692338955152
+  },
+  "candidate": {
+    "auc": 0.9618282874309877,
+    "cost": 150800,
+    "fn": 16,
+    "fp": 152,
+    "tp": 54,
+    "reviews": 206,
+    "threshold": 0.9721816318220373
+  },
+  "split": {
+    "train": {
+      "n": 119908,
+      "excluded_immature": 0,
+      "days": [
+        0,
+        18
+      ]
+    },
+    "valid": {
+      "n": 19934,
+      "excluded_immature": 0,
+      "days": [
+        18,
+        21
+      ]
+    },
+    "test": {
+      "n": 13551,
+      "excluded_immature": 0,
+      "days": [
+        21,
+        23
+      ]
+    },
+    "fraud_rates": {
+      "train": 0.00527904726957334,
+      "valid": 0.004966389083977125,
+      "test": 0.005165670430226551
+    }
+  },
+  "owner": "oncall-ml",
+  "schedule": "weekly or PSI alert + mature labels ready",
+  "rollback": "restore artifacts/ from artifacts/previous/"
+}

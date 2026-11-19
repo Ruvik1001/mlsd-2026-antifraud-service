@@ -1,0 +1,70 @@
+{
+  "model_version": "antifraud-2026.1",
+  "feature_names": [
+    "amount_rub",
+    "account_age_days",
+    "orders_1h",
+    "device_risk",
+    "pay_card",
+    "pay_wallet",
+    "pay_cod"
+  ],
+  "threshold": 0.9895692338955152,
+  "model_kind": "tree",
+  "split": {
+    "train": {
+      "n": 93200,
+      "excluded_immature": 0,
+      "days": [
+        0,
+        14
+      ]
+    },
+    "valid": {
+      "n": 26708,
+      "excluded_immature": 0,
+      "days": [
+        14,
+        18
+      ]
+    },
+    "test": {
+      "n": 33485,
+      "excluded_immature": 0,
+      "days": [
+        18,
+        23
+      ]
+    },
+    "fraud_rates": {
+      "train": 0.005203862660944206,
+      "valid": 0.0055414108132394784,
+      "test": 0.005047035986262506
+    }
+  },
+  "ladder": {
+    "rule": {
+      "valid_auc": 0.5,
+      "note": "жёсткое правило amount/age; не видит device_risk*orders_1h"
+    },
+    "linear": {
+      "valid_auc": 0.9721416069684142,
+      "note": "учитывает все признаки линейно; слабее на взаимодействии"
+    },
+    "tree": {
+      "valid_auc": 0.9650322574080104,
+      "note": "глубина 4 закрывает взаимодействие частоты и риска устройства"
+    }
+  },
+  "data_sha256": "3ee920da787fd3117f08eefffeb4fc63e9bbf763b86a13a27daa5012f673fea0",
+  "data_n": 200000,
+  "code_id": "lab_7_62-antifraud-v1",
+  "valid_threshold_stats": {
+    "cost": 419450,
+    "fn": 49,
+    "fp": 183,
+    "tp": 99,
+    "reviews": 282,
+    "threshold": 0.9895692338955152
+  }
+}

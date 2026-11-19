@@ -1,0 +1,138 @@
+{
+  "test_n": 33485,
+  "test_positives": 169,
+  "split": {
+    "train": {
+      "n": 93200,
+      "excluded_immature": 0,
+      "days": [
+        0,
+        14
+      ]
+    },
+    "valid": {
+      "n": 26708,
+      "excluded_immature": 0,
+      "days": [
+        14,
+        18
+      ]
+    },
+    "test": {
+      "n": 33485,
+      "excluded_immature": 0,
+      "days": [
+        18,
+        23
+      ]
+    },
+    "fraud_rates": {
+      "train": 0.005203862660944206,
+      "valid": 0.0055414108132394784,
+      "test": 0.005047035986262506
+    }
+  },
+  "models": {
+    "rule": {
+      "auc": 0.5,
+      "cost": 1352000,
+      "fn": 169,
+      "fp": 0,
+      "tp": 0,
+      "reviews": 0,
+      "threshold": 0.5
+    },
+    "linear": {
+      "auc": 0.9732145330956713,
+      "cost": 624550,
+      "fn": 77,
+      "fp": 57,
+      "tp": 92,
+      "reviews": 149,
+      "threshold": 0.9895692338955152
+    },
+    "tree": {
+      "auc": 0.957505447211248,
+      "cost": 503750,
+      "fn": 58,
+      "fp": 265,
+      "tp": 111,
+      "reviews": 376,
+      "threshold": 0.9895692338955152
+    },
+    "tree_calibrated": {
+      "auc": 0.957505447211248,
+      "brier": 0.004153827010200267,
+      "cost": 1352000,
+      "fn": 169,
+      "fp": 0,
+      "tp": 0,
+      "reviews": 0,
+      "threshold": 0.9895692338955152
+    }
+  },
+  "delta_cost_tree_minus_rule": {
+    "mean": -556821.5,
+    "lo": -848250.0,
+    "hi": -281300.0,
+    "n": 200
+  },
+  "calibration": {
+    "fraction_positives": [
+      0.00023611357062747182,
+      0.00044277175116227583,
+      0.0007765482430596001,
+      0.0008207934336525308,
+      0.04843216392424713
+    ],
+    "mean_predicted": [
+      0.00032017956197795985,
+      0.0004969198713773924,
+      0.0008630469784457166,
+      0.0013693035483595742,
+      0.055369669612663534
+    ],
+    "brier": 0.004153827010200267
+  },
+  "slices": [
+    {
+      "slice": "new_accounts_lt_30d",
+      "n": 568,
+      "positives": 7,
+      "auc": 0.876114081996435,
+      "reviews": 1,
+      "cost": 48000,
+      "fn": 6,
+      "fp": 0
+    },
+    {
+      "slice": "old_accounts_ge_30d",
+      "n": 32917,
+      "positives": 162,
+      "auc": 0.9583542989384336,
+      "reviews": 375,
+      "cost": 455750,
+      "fn": 52,
+      "fp": 265
+    },
+    {
+      "slice": "high_device_risk",
+      "n": 996,
+      "positives": 14,
+      "auc": 0.8683808553971487,
+      "reviews": 6,
+      "cost": 72150,
+      "fn": 9,
+      "fp": 1
+    }
+  ],
+  "business": {
+    "no_checks_loss": 1352000,
+    "with_model_cost": 503750,
+    "reviews": 376,
+    "review_share": 0.011228908466477528,
+    "fn_cost": 8000,
+    "fp_cost": 150,
+    "threshold": 0.9895692338955152
+  }
+}

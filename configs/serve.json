@@ -1,0 +1,7 @@
+{
+  "model_version": "antifraud-2026.1",
+  "p95_budget_ms": 100,
+  "feature_timeout_ms": 20,
+  "review_queue_limit": 3000,
+  "unknown_category_policy": "review"
+}

@@ -1,0 +1,43 @@
+{
+  "reference_days": [
+    0,
+    14
+  ],
+  "current_days": [
+    23,
+    30
+  ],
+  "psi": {
+    "amount_rub": 0.18531933829116784,
+    "account_age_days": 0.0026221899304883986,
+    "orders_1h": 4.624008684025021e-05,
+    "device_risk": 0.5366513231305037
+  },
+  "alerts": [
+    {
+      "feature": "device_risk",
+      "psi": 0.5366513231305037,
+      "action": "investigate_data_before_quality"
+    }
+  ],
+  "incident": [
+    {
+      "type": "contract_break_and_mix_shift",
+      "device_risk_stuck_share": 0.3333333333333333,
+      "amount_boost_share": 0.3333333333333333
+    }
+  ],
+  "delayed_quality": {
+    "n_mature": 0,
+    "immature_share": 1.0,
+    "cost": null,
+    "auc_proxy_reviews": null
+  },
+  "selection_bias_note": "В проде метки богаче у review-заказов; оценка FN по непроверенным approve смещена вниз. Здесь учебная проверка раскрывает все метки через 7 дней.",
+  "first_signal": {
+    "feature": "device_risk",
+    "psi": 0.5366513231305037,
+    "action": "investigate_data_before_quality"
+  },
+  "n_obs_for_alert": 4640
+}
